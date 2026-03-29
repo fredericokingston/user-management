@@ -93,3 +93,31 @@ java -jar build/libs/user-management-0.0.1-SNAPSHOT.jar
 ```
 
 > **Windows users:** replace `./gradlew` with `gradlew.bat` in all commands above.
+
+## Next Steps
+
+This learning path builds progressively on what is already implemented here.
+
+### Stage 1 — Strengthen the current app
+
+- Add input validation using `@Valid` and Jakarta Bean Validation annotations (e.g. `@NotBlank`, `@Email`) on the request body
+- Add centralised error handling with `@ControllerAdvice` and `@ExceptionHandler` to return structured error responses
+- Write unit tests for `UserService` with JUnit 5 + Mockito, and integration tests for `UserController` with `@SpringBootTest`
+
+### Stage 2 — Persistence & data
+
+- Replace the in-memory H2 database with a persistent store such as PostgreSQL or MySQL
+- Manage schema evolution with a migration tool (Flyway or Liquibase)
+- Explore `@Query`, JPQL, and native queries in Spring Data JPA
+
+### Stage 3 — Security & APIs
+
+- Secure endpoints with Spring Security (authentication and role-based authorisation)
+- Implement stateless authentication using JWT (JSON Web Tokens)
+- Add interactive API documentation with Springdoc OpenAPI (Swagger UI)
+
+### Stage 4 — Production readiness
+
+- Add observability with Spring Boot Actuator and Micrometer metrics
+- Containerise the application with Docker and orchestrate locally with Docker Compose
+- Set up a CI/CD pipeline (e.g. GitHub Actions) and explore cloud deployment options
